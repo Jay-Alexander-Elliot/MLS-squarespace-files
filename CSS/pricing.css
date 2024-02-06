@@ -1,0 +1,78 @@
+h1.blog-title a {
+    font-size: 20px;
+    font-weight: 900 !important;
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centering items */
+    align-items: stretch; /* This will make all items stretch to the same height */
+    margin: 0 auto; /* Centers the container if it's narrower than the full width */
+    max-width: 1200px; /* Maximum width of the container */
+}
+
+.pricing-card {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: space-between; /* Distribute the space between items */
+    align-items: center; /* Center-align the items horizontally */
+    text-align: center;
+    padding: 30px; /* Padding consistent with service-box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    flex: 0 0 300px; /* Will not grow or shrink from 300px until the max-width is reached */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    height: 300px; /* Fixed height to match service-box, adjust this value as needed */
+    margin-bottom: 20px; /* Consistent with service-box */
+}
+
+.pricing-amount {
+    color: #85bb65;
+    font-size: 50px; /* Adjusted to be more in line with the service-box titles */
+    margin-bottom: 0px; /* Reduced space between the amount and the title */
+    font-weight: bold;
+}
+
+.pricing-title {
+    font-size: 18px; /* Adjusted to match the .offering class */
+    margin-bottom: 0px; /* Reduced space between the title and the description */
+    text-transform: uppercase;
+}
+
+.pricing-description {
+    margin-top: 0px; /* Reduced space between the title and the description */
+    font-size: 16px; /* Adjusted to be more in line with service-box descriptions */
+    margin-bottom: 15px; /* Increased space between the description and the button */
+}
+
+.pricing-card:hover {
+    box-shadow: 0 10px 20px rgba(37, 53, 81, 0.5);
+    transform: translateY(-5px);
+}
+
+.custom-pricing-link {
+    background-color: #253551;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    display: inline-block;
+    border-radius: 20px; /* Rounded edges for the button */
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .pricing-container .pricing-card {
+        flex: 0 0 45%; /* They will take up roughly half the container's width */
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-container .pricing-card {
+        flex: 0 0 100%; /* Full width on mobile screens */
+        max-width: 100%; /* Ensure they don't exceed the container's width */
+    }
+}

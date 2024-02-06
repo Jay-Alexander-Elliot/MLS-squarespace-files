@@ -1,0 +1,80 @@
+h1.blog-title a {
+    font-size: 20px;
+    font-weight: 900 !important;
+}
+
+.offering {
+    font-size: 18px; /* Adjust to match the design */
+    font-weight: bold;
+    margin-bottom: 10px; /* Space between the offering title and the description */
+    text-transform: uppercase; /* If you want the titles to be uppercase as commonly seen in such designs */
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* This provides the spacing around each element */
+    justify-content: center; /* This will center the boxes in the container */
+    margin: 0 auto; /* Centers the container if it's narrower than the full width */
+    max-width: 1200px; /* Maximum width of the container */
+}
+
+.service-box {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: space-between; /* Distribute the space between items */
+    align-items: center; /* Center-align the items horizontally */
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    flex: 0 0 300px; /* Will not grow or shrink from 300px until the max-width is reached */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    height: 300px; /* Fixed height, adjust this value as needed */
+    margin-bottom: 10px; /* Spacing between the boxes vertically */
+    height: 300px; /* Adjust height as needed */
+}
+
+.service-box h2 {
+    font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 5px; /* Reduced space between the title and the content */
+}
+
+.service-box p {
+    /* Existing styles... */
+    margin-top: 0; /* Remove any top margin on the paragraph if it exists */
+    margin-bottom: 5px; /* Space between the content and the button */
+}
+
+.service-box:hover {
+    box-shadow: 0 10px 20px rgba(37, 53, 81, 0.5);
+    transform: translateY(-5px);
+}
+
+.service-button {
+    background-color: #253551;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 0px;
+    display: block;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600; /* Make the font weight bolder */
+    height: 35px; /* Fixed height for all buttons */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .service-container .service-box {
+        flex: 0 0 45%; /* They will take up roughly half the container's width */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-container .service-box {
+        flex: 0 0 100%; /* Full width on mobile screens */
+        max-width: 100%; /* Ensure they don't exceed the container's width */
+    }
+}
