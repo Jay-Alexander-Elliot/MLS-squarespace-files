@@ -1,0 +1,40 @@
+.mobile_pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 auto;
+    max-width: 1200px;
+    gap: 30px; /* Increased gap for more space between cards */
+}
+
+.mobile_pricing-card {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    flex: 0 0 300px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    height: auto; /* Changed to auto for dynamic height */
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .mobile_pricing-container .mobile_pricing-card {
+        flex: 0 0 45%; /* Adjust to take up roughly half the container's width */
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile_pricing-container .mobile_pricing-card {
+        flex: 0 0 100%; /* Full width on smaller screens */
+        max-width: 100%;
+    }
+}
